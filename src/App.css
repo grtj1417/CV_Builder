@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+VIC:wght@100..400&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px
+}
+
+body {
+  padding: 30px;
+  padding-left: 0px;
+  font-size: 18px;
+  font-family: Playwrite Australia Victoria;
+  background-color: #e0e0e0;
+  float: left;
+}
+
+div {
+  cursor: default;
+}
+
+.app {
+  display: flex;
+}
+
+@media screen and(max-width:960px) {
+  .app {
+    display: block;
+  }
+}
