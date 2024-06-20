@@ -12,7 +12,7 @@ export default {
     },
     target: 'web',
     devServer: {
-        port: '5000',
+        port: '4000',
         static: {
             directory: path.join('./public')
         },
