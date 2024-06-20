@@ -4,16 +4,16 @@ import PersonalData from './js/component/PersonalData'
 import Education from './js/component/Education'
 import Experience from './js/component/Experience'
 import Skill from './js/component/Skill'
-import ColorContronl from './js/component/ColorControl'
+import ColorContronl from './js/component/Control'
+import exampleData from './js/example-data'
 import './App.css'
 import './css/leftSidebar.css'
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
-  const [imageFile, setImage] = useState("https://i.pinimg.com/564x/df/ce/a7/dfcea7989195d3273c2bcb367fca0a83.jpg");
   const [data, setData] = useState({
-    color1: "rgb(135, 237, 222)",
-    color2: "rgb(245, 130, 218)",
+    color1: "rgb(132, 207, 234)",
+    color2: "rgb(147, 130, 245)",
     imgName: "",
     imgSrc: "",
     info: [
@@ -64,8 +64,14 @@ function App() {
       }
     ]
   })
+
+  const [imageFile, setImage] = useState("https://i.pinimg.com/564x/df/ce/a7/dfcea7989195d3273c2bcb367fca0a83.jpg");
+
+  function loadSampleData() {
+    setData(exampleData);
+  }
+
   function handleImageUpload(e) {
-    console.log(e.target.files);
     setImage(URL.createObjectURL(e.target.files[0]));
   }
 
@@ -93,14 +99,12 @@ function App() {
       startDate: "",
       endDate: ""
     };
-    console.log("id" + emptyEduData.id)
     var prevData = { ...data };
     prevData.educations.push(emptyEduData);
     setData(prevData);
   };
 
   const deleteEducation = (id) => {
-    console.log(id);
     var prevData = ({
       ...data,
       educations: data.educations.filter(education => education.id !== id)
@@ -115,7 +119,6 @@ function App() {
         if (elem.id === id) {
           elem[event.target.name] = event.target.value
         }
-        // console.log(elem)
         return elem
       })
     })
@@ -151,7 +154,6 @@ function App() {
         if (elem.id === id) {
           elem[event.target.name] = event.target.value
         }
-        console.log(elem)
         return elem
       })
     })
@@ -238,6 +240,7 @@ function App() {
             handleImageUpload={handleImageUpload}
             handleColor1={handleColor1}
             handleColor2={handleColor2}
+            loadSampleData={loadSampleData}
           />
           <Resume data={data} imageFile={imageFile} />
         </div>

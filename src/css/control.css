@@ -1,0 +1,70 @@
+.control {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+}
+
+.control-title {
+    align-self: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #213f71;
+    margin-left: 8px;
+}
+
+.control>div {
+    display: flex;
+}
+
+.upload-photo,
+.load-example {
+    color: #3262a9;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: Playwrite Australia Victoria;
+    white-space: nowrap;
+    width: min-content;
+    height: min-content;
+    padding: 5px 12px;
+    margin-right: 20px;
+    align-self: center;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background-color: white;
+    transition: border-color 0.5s ease-in-out;
+}
+
+.upload-photo:hover,
+.load-example:hover {
+    border-color: #646cff;
+    color: #3f7ad2;
+}
+
+.upload-photo:focus,
+.upload-photo:focus-visible,
+.load-example:focus,
+.load-example:focus-visible {
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+.upload-photo>input {
+    display: none;
+}
+
+.color-picker-label {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px 10px 10px 0px;
+}
+
+.color-picker {
+    width: 10px;
+    opacity: 0;
+    cursor: pointer;
+}

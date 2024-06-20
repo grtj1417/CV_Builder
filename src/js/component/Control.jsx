@@ -1,6 +1,6 @@
+import "../../css/control.css"
 
-
-function ColorContronl({ data, handleImageUpload, handleColor1, handleColor2 }) {
+function ColorContronl({ data, handleImageUpload, handleColor1, handleColor2, loadSampleData }) {
 
     return (
         <div className="control">
@@ -9,7 +9,7 @@ function ColorContronl({ data, handleImageUpload, handleColor1, handleColor2 }) 
                 <div className="control-title">Resume</div>
             </div>
             <div>
-                {/* <button onClick={handlePrint}>print </button> */}
+                <button className="load-example" onClick={loadSampleData}>Load Example</button>
                 <label  className="upload-photo">
                     Select file
                     <input type="file" onChange={handleImageUpload}/>

@@ -11,6 +11,7 @@ function Skill({ data, handleSkill, handleAddBtn, handleDeleteBtn }) {
                             autoComplete="off"
                             name="skill-input"
                             id="skill-input"
+                            value={skill.text}
                             onChange={(e) => handleSkill(e, skill.id)}
                         />
                         {data.skills.length > 1 &&

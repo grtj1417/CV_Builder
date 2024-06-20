@@ -7,7 +7,6 @@
 
 body {
   padding: 30px;
-  padding-left: 0px;
   font-size: 18px;
   font-family: Playwrite Australia Victoria;
   background-color: #e0e0e0;
@@ -19,11 +18,24 @@ div {
 }
 
 .app {
+  width: 100%;
   display: flex;
+  gap: 3rem;
 }
 
-@media screen and(max-width:960px) {
+
+@media(max-width:960px){
   .app {
-    display: block;
+    display: inline-block;
+  }
+  .control {
+    margin-top: 30px;
+  }
+  .display-resume {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .left-sidebar {
+    margin: 0 auto;
   }
 }
