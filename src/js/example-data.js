@@ -27,7 +27,7 @@ const exampleData = {
         {
             id: uuidv4(),
             school: "台北科技大學",
-            degree: "學士",
+            degree: "工業設計系學士",
             startDate: "2019/09",
             endDate: "2024/06"
         }
