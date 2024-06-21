@@ -23,7 +23,7 @@ const AudioPlayer = () => {
         <div>
             <audio
                 ref={audioRef}
-                src="BubbleGum.mp3"
+                src="./audio/BubbleGum.mp3"
                 autoPlay
                 controls
                 loop

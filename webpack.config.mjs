@@ -14,7 +14,7 @@ export default {
     devServer: {
         port: '4000',
         static: {
-            directory: path.join('./public')
+            directory: path.resolve('./public')
         },
         open: true,
         hot: true,
@@ -56,6 +56,18 @@ export default {
                     loader: 'babel-loader',
                 }
             },
+            {
+                test: /\.(mp3|wav)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[hash].[ext]',
+                            outputPath: 'audio/'
+                        }
+                    }
+                ]
+            }
         ]
     }
 };

@@ -6,28 +6,25 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/resume.css ***!
   \**********************************************************************/
 .display-resume {
-    height: 80%;
-    /* max-height: 80rem; */
-    width: 46.1vw;
-    min-width: 400px;
+    --bcg-color: rgb(244, 252, 255);
+    --standard-gradient: linear-gradient(#b7bebe, #8cb8da) 15;
+    aspect-ratio: 0.7;
     border-radius: 10px;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 30px;
     margin-left: 10px;
-    background-color: #f1f1f1;
+    background-color: var(--bcg-color);
     box-shadow: 3px 3px 10px rgb(148, 148, 148);
-    /* box-shadow: inset 0px 6px #3262a9; */
-    --standard-gradient:linear-gradient(#b7bebe, #8cb8da) 15;
     position: relative;
     color: #213f71;
 }
 
 .resume-top {
-    height: 15px;
-    min-width: 500px;
+    height: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     padding: -30px;
     margin: -30px;
     margin-bottom: 20px;
@@ -42,32 +39,29 @@
 }
 
 .name {
-    width: min-content;
+    width: 10rem;
     height: min-content;
-    white-space: nowrap;
     grid-column: 2/3;
     align-self: center;
     justify-self: center;
     text-align: center;
     font-size: 38px;
     font-weight: bold;
+    margin-left: 5px;
 }
 
 .portfolio {
-    width: min-content;
+    width: 1rem;
     height: min-content;
-    white-space: nowrap;
-    grid-column: 2/3;
-    align-self: center;
-    justify-self: center;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: normal;
+    margin-left: 5px;
 }
 
 .profile-photo {
     grid-column: 1/2;
-    width: 170px;
-    height: 190px;
+    width: 10rem;
+    aspect-ratio: 0.84;
     object-fit: cover;
     margin-top: 15px;
     margin-left: 10px;
@@ -82,10 +76,10 @@
     height: 200px;
     margin-top: 0px;
     object-fit: cover;
-    border: .2rem solid rgb(225, 186, 186);
+    border: .15rem solid rgb(225, 186, 186);
     position: absolute;
     z-index: 10;
-    border-image: linear-gradient(to right,#f58fd3, #5496cc) 15;
+    border-image: linear-gradient(to right, #f58fd3, #5496cc) 15;
 }
 
 .profile-pohto-line2 {
@@ -94,7 +88,7 @@
     margin-top: 45px;
     margin-left: -2px;
     object-fit: cover;
-    background-color: #f1f1f1;
+    background-color: var(--bcg-color);
     position: absolute;
     z-index: 15;
 }
@@ -105,8 +99,7 @@
     margin-top: 70px;
     margin-left: -2px;
     object-fit: cover;
-    background-color: #f1f1f1;
-    /* background-color: blue; */
+    background-color: var(--bcg-color);
     position: absolute;
     z-index: 12;
 }
@@ -117,8 +110,7 @@
     margin-top: 90px;
     margin-left: -2px;
     object-fit: cover;
-    background-color: #f1f1f1;
-    /* background-color: rgb(209, 202, 202); */
+    background-color: var(--bcg-color);
     position: absolute;
     z-index: 11;
 }
@@ -129,8 +121,7 @@
     margin-top: 3px;
     margin-left: 20px;
     object-fit: cover;
-    background-color: #f1f1f1;
-    /* background-color: rgb(209, 202, 202); */
+    background-color: var(--bcg-color);
     position: absolute;
     z-index: 11;
 }
@@ -140,7 +131,7 @@
     width: 55%;
     min-height: 80px;
     border-image: var(--standard-gradient);
-    border-width: 3px;
+    border-width: .1rem;
     border-style: solid;
     padding: 20px;
     margin-right: 10px;
@@ -166,7 +157,7 @@ hr {
     width: 45%;
     min-height: 80px;
     border-image: var(--standard-gradient);
-    border-width: 3px;
+    border-width: .1rem;
     border-style: solid;
     padding: 20px;
     margin-right: 10px;
@@ -199,13 +190,13 @@ hr {
     padding: 20px;
     min-height: 80px;
     border-image: var(--standard-gradient);
-    border-width: 3px;
+    border-width: .1rem;
     border-style: solid;
 }
 
 .experience {
     margin-top: 20px;
-    text-align:justify;
+    text-align: justify;
 }
 
 .resume-title {
@@ -214,9 +205,9 @@ hr {
     font-weight: bold;
     color: #213f71;
     text-shadow: .05em .05em .11em rgb(152, 152, 152);
-    background-color: #f1f1f1;
+    background-color: rgb(244, 252, 255);
     padding: 0 5px;
-    margin-top: -40px;
+    margin-top: -35px;
     margin-left: -10px;
 }
 
@@ -230,13 +221,6 @@ hr {
 .small {
     font-size: 16px;
     text-align: center;
-}
-
-.white-area {
-    position: relative;
-    z-index: 99;
-    width: 20px;
-    background-color: aqua;
 }
 
 .education-skill {
@@ -262,6 +246,25 @@ hr {
 .resume-contact-img {
     width: 30px;
     height: 30px;
+}
+
+@media screen and (max-width:960px) {
+    .display-resume {
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width:730px) {
+    .resume-skill>div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+
+    .skill {
+        margin: 5px auto;
+    }
 }
 /*!************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/personal.css ***!
@@ -289,7 +292,8 @@ hr {
 }
 
 .upload-photo,
-.load-example {
+.load-example,
+.print {
     color: #3262a9;
     cursor: pointer;
     font-size: 17px;
@@ -327,7 +331,7 @@ hr {
 .color-picker-label {
     display: inline-block;
     width: 40px;
-    height: 40px;
+    aspect-ratio: 1/1;
     background-color: #ffffff;
     border: 1px solid #ccc;
     border-radius: 50%;
@@ -340,6 +344,53 @@ hr {
     opacity: 0;
     cursor: pointer;
 }
+
+.control-music {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.5s ease-in-out;
+    padding-top: 3px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.control-music:hover {
+    box-shadow: 1px 1px 3px rgb(184, 184, 184);
+    border-color: #acacac;
+}
+
+.mute {
+    width: 22px;
+    align-self: center;
+    justify-self: center;
+}
+
+@media screen and (max-width:960px) {
+    .control {
+        margin-left: 0;
+        margin-top: 30px;
+        display: inline-block;
+    }
+
+    .color-picker-label {
+        margin: 0;
+        margin-left: 5px;
+    }
+
+    .control-music {
+        margin-top: 0;
+    }
+
+    .upload-photo,
+    .load-example,
+    .print {
+        margin-top: 10px;
+    }
+}
 /*!*******************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/App.css (1) ***!
   \*******************************************************************/
@@ -349,37 +400,41 @@ hr {
 }
 
 body {
-  padding: 30px;
+  /* width: 100%; */
+  padding: 20px;
   font-size: 18px;
   font-family: Playwrite Australia Victoria;
   background-color: #e0e0e0;
-  float: left;
 }
 
 div {
   cursor: default;
 }
 
+
+
 .app {
   width: 100%;
   display: flex;
   gap: 3rem;
+  justify-content: center;
+  margin: 0 auto;
 }
 
+@media screen and (max-width:960px) {
+  #root {
+    margin-left: 20px;
+    justify-content: center;
+  }
 
-@media(max-width:960px){
   .app {
+    width: calc(100% - 40px);
     display: inline-block;
+    gap: 0;
   }
-  .control {
-    margin-top: 30px;
-  }
-  .display-resume {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .left-sidebar {
-    margin: 0 auto;
+
+  .right-display {
+    width: calc(100% - 40px);
   }
 }
 /*!***************************************************************************!*\
@@ -387,8 +442,7 @@ div {
   \***************************************************************************/
 .left-sidebar {
     display: flex;
-    /* width: clamp(400px, 100%, 620px); */
-    width: 100%;
+    width: clamp(200px, 100%, 620px);
     justify-self: center;
     flex-direction: column;
     gap: 1rem;
@@ -493,6 +547,7 @@ div {
 
 label {
     display: flex;
+    white-space: nowrap;
 }
 
 input {
@@ -502,4 +557,14 @@ input {
     margin-bottom: 10px;
     margin-right: 10px;
     width: calc(8vw + 5rem);
+}
+
+
+@media screen and (max-width:960px) {
+    .left-sidebar {
+        width: 100%;
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }
