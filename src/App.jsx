@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import { useReactToPrint } from 'react-to-print'
 import Resume from './js/component/Resume'
 import PersonalData from './js/component/PersonalData'
 import Education from './js/component/Education'
@@ -6,6 +7,7 @@ import Experience from './js/component/Experience'
 import Skill from './js/component/Skill'
 import ColorContronl from './js/component/Control'
 import exampleData from './js/example-data'
+import AudioPlayer from './js/component/Audio'
 import './App.css'
 import './css/leftSidebar.css'
 import { v4 as uuidv4 } from 'uuid';
@@ -210,6 +212,12 @@ function App() {
     setData(prevData);
   }
 
+  const componentRef = useRef()
+  const handlePrint = useReactToPrint({
+    content: () => componentRef.current,
+    documentTitle: `${data.info[0].text}'s Resume`
+  })
+
   return (
     <>
       <div className='app'>
@@ -241,8 +249,9 @@ function App() {
             handleColor1={handleColor1}
             handleColor2={handleColor2}
             loadSampleData={loadSampleData}
+            handlePrint={handlePrint}
           />
-          <Resume data={data} imageFile={imageFile} />
+          <Resume data={data} imageFile={imageFile} reference={componentRef} />
         </div>
       </div>
     </>

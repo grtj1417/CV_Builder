@@ -105,6 +105,7 @@
 
 label {
     display: flex;
+    white-space: nowrap;
 }
 
 input {

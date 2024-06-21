@@ -1,8 +1,8 @@
 import "../../css/resume.css"
 
-function Resume({ data, imageFile }) {
+function Resume({ data, imageFile, reference }) {
   return (
-    <div className='display-resume'>
+    <div className='display-resume' ref={reference}>
       <div className="resume-top"
         style={{ background: `linear-gradient(to left, ${data.color1}, ${data.color2})` }}
       ></div>
@@ -16,7 +16,7 @@ function Resume({ data, imageFile }) {
           <div className="profile-pohto-line5"></div>
         </div>
         <img className="profile-photo" src={imageFile} alt="" />
-        <div className="name">{data.info[0].text}<div className="portfolio small">{data.info[3].text}</div></div>
+        <div className="name">{data.info[0].text}<div className="portfolio">{data.info[3].text}</div></div>
       </div>
 
       <div className="education-skill">

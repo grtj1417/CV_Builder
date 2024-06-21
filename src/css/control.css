@@ -17,7 +17,8 @@
 }
 
 .upload-photo,
-.load-example {
+.load-example,
+.print {
     color: #3262a9;
     cursor: pointer;
     font-size: 17px;
@@ -69,13 +70,49 @@
     cursor: pointer;
 }
 
+.control-music {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.5s ease-in-out;
+    padding-top: 3px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.control-music:hover {
+    box-shadow: 1px 1px 3px rgb(184, 184, 184);
+    border-color: #acacac;
+}
+
+.mute {
+    width: 22px;
+    align-self: center;
+    justify-self: center;
+}
+
 @media screen and (max-width:960px) {
     .control {
         margin-left: 0;
         margin-top: 30px;
         display: inline-block;
     }
+
     .color-picker-label {
         margin: 0;
+        margin-left: 5px;
+    }
+
+    .control-music {
+        margin-top: 0;
+    }
+
+    .upload-photo,
+    .load-example,
+    .print {
+        margin-top: 10px;
     }
 }
