@@ -36,6 +36,11 @@
     transition: border-color 0.5s ease-in-out;
 }
 
+.print {
+    margin-left: 15px;
+    align-self: center;
+}
+
 .upload-photo:hover,
 .load-example:hover {
     border-color: #646cff;
@@ -70,6 +75,11 @@
     cursor: pointer;
 }
 
+.control-top-right {
+    display: flex;
+    margin-left: 10px;
+}
+
 .control-music {
     width: 35px;
     height: 35px;
@@ -81,6 +91,7 @@
     padding-top: 3px;
     margin-top: 15px;
     margin-left: 10px;
+    align-self: center;
 }
 
 .control-music:hover {
@@ -103,16 +114,24 @@
 
     .color-picker-label {
         margin: 0;
-        margin-left: 5px;
+        margin-left: 10px;
     }
 
     .control-music {
-        margin-top: 0;
+        margin-top: 10px;
     }
 
     .upload-photo,
     .load-example,
     .print {
         margin-top: 10px;
+    }
+
+    .print {
+        margin-left: 10px;
+    }
+
+    .control-top-right {
+        margin-left: 0px;
     }
 }

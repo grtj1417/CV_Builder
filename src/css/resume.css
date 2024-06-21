@@ -111,7 +111,7 @@
 .profile-pohto-line5 {
     width: 100px;
     height: 120px;
-    margin-top: 3px;
+    margin-top: .15rem;
     margin-left: 20px;
     object-fit: cover;
     background-color: var(--bcg-color);
