@@ -6,36 +6,40 @@
 }
 
 body {
-  padding: 30px;
+  /* width: 100%; */
+  padding: 20px;
   font-size: 18px;
   font-family: Playwrite Australia Victoria;
   background-color: #e0e0e0;
-  float: left;
 }
 
 div {
   cursor: default;
 }
 
+
+
 .app {
   width: 100%;
   display: flex;
   gap: 3rem;
+  justify-content: center;
+  margin: 0 auto;
 }
 
+@media screen and (max-width:960px) {
+  #root {
+    margin-left: 20px;
+    justify-content: center;
+  }
 
-@media(max-width:960px){
   .app {
+    width: calc(100% - 40px);
     display: inline-block;
+    gap: 0;
   }
-  .control {
-    margin-top: 30px;
-  }
-  .display-resume {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .left-sidebar {
-    margin: 0 auto;
+
+  .right-display {
+    width: calc(100% - 40px);
   }
 }

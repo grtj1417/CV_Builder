@@ -234,7 +234,7 @@ function App() {
             handleDeleteBtn={deleteSkill} />
         </div>
 
-        <div>
+        <div className='right-display'>
           <ColorContronl
             data={data}
             handleImageUpload={handleImageUpload}

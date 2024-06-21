@@ -1,8 +1,8 @@
 .display-resume {
     height: 80%;
     /* max-height: 80rem; */
-    width: 46.1vw;
-    min-width: 400px;
+    /* width: calc(100% - 100px); */
+    /* min-width: 390px; */
     border-radius: 10px;
     overflow: hidden;
     display: flex;
@@ -13,14 +13,14 @@
     background-color: #f1f1f1;
     box-shadow: 3px 3px 10px rgb(148, 148, 148);
     /* box-shadow: inset 0px 6px #3262a9; */
-    --standard-gradient:linear-gradient(#b7bebe, #8cb8da) 15;
+    --standard-gradient: linear-gradient(#b7bebe, #8cb8da) 15;
     position: relative;
     color: #213f71;
 }
 
 .resume-top {
     height: 15px;
-    min-width: 500px;
+    /* min-width: 500px; */
     padding: -30px;
     margin: -30px;
     margin-bottom: 20px;
@@ -78,7 +78,7 @@
     border: .2rem solid rgb(225, 186, 186);
     position: absolute;
     z-index: 10;
-    border-image: linear-gradient(to right,#f58fd3, #5496cc) 15;
+    border-image: linear-gradient(to right, #f58fd3, #5496cc) 15;
 }
 
 .profile-pohto-line2 {
@@ -198,7 +198,7 @@ hr {
 
 .experience {
     margin-top: 20px;
-    text-align:justify;
+    text-align: justify;
 }
 
 .resume-title {
@@ -225,13 +225,6 @@ hr {
     text-align: center;
 }
 
-.white-area {
-    position: relative;
-    z-index: 99;
-    width: 20px;
-    background-color: aqua;
-}
-
 .education-skill {
     display: flex;
 }
@@ -255,4 +248,11 @@ hr {
 .resume-contact-img {
     width: 30px;
     height: 30px;
+}
+
+@media screen and (max-width:960px) {
+    .display-resume {
+        width: 100%;
+        margin: 0;
+    }
 }

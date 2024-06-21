@@ -1,7 +1,6 @@
 .left-sidebar {
     display: flex;
-    /* width: clamp(400px, 100%, 620px); */
-    width: 100%;
+    width: clamp(200px, 100%, 620px);
     justify-self: center;
     flex-direction: column;
     gap: 1rem;
@@ -115,4 +114,14 @@ input {
     margin-bottom: 10px;
     margin-right: 10px;
     width: calc(8vw + 5rem);
+}
+
+
+@media screen and (max-width:960px) {
+    .left-sidebar {
+        width: 100%;
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
 }

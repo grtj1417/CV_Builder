@@ -22,7 +22,6 @@ function Resume({ data, imageFile }) {
       <div className="education-skill">
         <div className="resume-education">
           <div className="resume-title">Education</div>
-          <div className="white-area"></div>
           <div>
             {data.educations.map((education, idx) => {
               return (
