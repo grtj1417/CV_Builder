@@ -1,5 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 import path from 'path';
 
 export default {
@@ -34,6 +35,11 @@ export default {
         }),
         new MiniCssExtractPlugin({
             filename: 'css/[name].css'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'public/images', to: 'images' }
+            ]
         })
     ],
     module: {
