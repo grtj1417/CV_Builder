@@ -38,7 +38,8 @@ export default {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: 'public/images', to: 'images' }
+                { from: 'public/images', to: 'images' },
+                { from: 'public/audio', to: 'audio' }
             ]
         })
     ],
@@ -61,18 +62,6 @@ export default {
                 use: {
                     loader: 'babel-loader',
                 }
-            },
-            {
-                test: /\.(mp3|wav)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[hash].[ext]',
-                            outputPath: 'audio/'
-                        }
-                    }
-                ]
             }
         ]
     }
