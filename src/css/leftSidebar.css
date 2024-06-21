@@ -126,3 +126,9 @@ input {
         margin-bottom: 20px;
     }
 }
+
+@media screen and (max-width:400px) {
+    input {
+        width: calc(5vw + 4rem);
+    }
+}

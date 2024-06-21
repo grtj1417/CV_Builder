@@ -6,7 +6,6 @@
 }
 
 body {
-  /* width: 100%; */
   padding: 20px;
   font-size: 18px;
   font-family: Playwrite Australia Victoria;
@@ -16,8 +15,6 @@ body {
 div {
   cursor: default;
 }
-
-
 
 .app {
   width: 100%;

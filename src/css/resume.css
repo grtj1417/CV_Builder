@@ -255,7 +255,30 @@ hr {
         margin: 0 auto;
     }
 
+    .resume-personal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resume-personal>div:nth-child(1) {
+        margin-left: 20px;
+    }
+
+    .resume-personal>img {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
     .skill {
         margin: 5px auto;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .resume-education {
+        width: 33%;
+    }
+    .resume-skill {
+        width: 33%;
     }
 }

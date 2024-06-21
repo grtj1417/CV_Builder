@@ -262,8 +262,31 @@ hr {
         margin: 0 auto;
     }
 
+    .resume-personal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .resume-personal>div:nth-child(1) {
+        margin-left: 20px;
+    }
+
+    .resume-personal>img {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
     .skill {
         margin: 5px auto;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .resume-education {
+        width: 33%;
+    }
+    .resume-skill {
+        width: 33%;
     }
 }
 /*!************************************************************************!*\
@@ -400,7 +423,6 @@ hr {
 }
 
 body {
-  /* width: 100%; */
   padding: 20px;
   font-size: 18px;
   font-family: Playwrite Australia Victoria;
@@ -410,8 +432,6 @@ body {
 div {
   cursor: default;
 }
-
-
 
 .app {
   width: 100%;
@@ -566,5 +586,11 @@ input {
         margin-left: 10px;
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    input {
+        width: calc(5vw + 4rem);
     }
 }
