@@ -16,7 +16,7 @@ function ColorContronl({ data, handleImageUpload, handleColor1, handleColor2, lo
             <div>
                 <button className="load-example" onClick={loadSampleData}>Load Example</button>
                 <label className="upload-photo">
-                    Select file
+                    Select photo
                     <input type="file" onChange={handleImageUpload} />
                 </label>
                 <label className="color-picker-label"
